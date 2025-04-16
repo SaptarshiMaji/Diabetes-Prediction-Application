@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+</head>
+<body>
+    <h1>Diabetes Prediction Form</h1>
+    <form method="post">
+        <label for="Pregnancies">Pregnancies:</label>
+        <input type="number" id="Pregnancies" name="Pregnancies" required><br><br>
+        
+        <label for="Glucose">Glucose:</label>
+        <input type="number" id="Glucose" name="Glucose" step="any" required><br><br>
+        
+        <label for="BloodPressure">Blood Pressure:</label>
+        <input type="number" id="BloodPressure" name="BloodPressure" step="any" required><br><br>
+        
+        <label for="SkinThickness">Skin Thickness:</label>
+        <input type="number" id="SkinThickness" name="SkinThickness" step="any" required><br><br>
+        
+        <label for="Insulin">Insulin:</label>
+        <input type="number" id="Insulin" name="Insulin" step="any" required><br><br>
+        
+        <label for="BMI">BMI:</label>
+        <input type="number" id="BMI" name="BMI" step="any" required><br><br>
+        
+        <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+        <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" step="any" required><br><br>
+        
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if result %}
+        <h2>Prediction Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
